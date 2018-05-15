@@ -114,7 +114,7 @@ func main() {
 				fmt.Println()
 			*/
 			jsonKey := err.Field()
-			fieldName, _ := transFr.T(jsonKey, "")
+			fieldName, _ := transFr.T(jsonKey)
 			message := strings.Replace(err.Translate(transFr), jsonKey, fieldName, -1)
 			jsonKey = jsonKey[2 : len(jsonKey)-2]
 			errMsg[jsonKey] = message
